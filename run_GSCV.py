@@ -358,6 +358,8 @@ def main(argv):
 
         # Initialize one module name
         model_name = 'CliffSER1D_EMD'
+
+        EMD_flag = True
         
         # Specify which module contains the model
         module_name = 'clifford_'
@@ -383,6 +385,8 @@ def main(argv):
 
         # Initialize one module name
         model_name = 'PureCliffSER1D_EMD'
+
+        EMD_flag = True
         
         # Specify which module contains the model
         module_name = 'clifford_'
@@ -408,6 +412,8 @@ def main(argv):
 
         # Initialize one module name
         model_name = 'CliffSER1D'
+
+        EMD_flag = False
         
         # Specify which module contains the model
         module_name = 'clifford_'
@@ -441,6 +447,8 @@ def main(argv):
 
         # Initialize one module name
         model_name = 'PureCliffSER1D'
+
+        EMD_flag = False
         
         # Specify which module contains the model
         module_name = 'clifford_'
@@ -469,6 +477,8 @@ def main(argv):
         
         # Specify which module contains the model
         module_name = 'clifford_'
+
+        EMD_flag = True
 
         # Define the hyperparameters grids
 
@@ -502,6 +512,8 @@ def main(argv):
         # Specify which module contains the model
         module_name = 'clifford_'
 
+        EMD_flag = False
+
         # Define the hyperparameters grids
 
         #       x       =   x_0 + x1e1 + x2e2 + x12e12
@@ -533,6 +545,42 @@ def main(argv):
         
         # Specify which module contains the model
         module_name = 'clifford_'
+
+        EMD_flag = False
+
+        # Define the hyperparameters grids
+
+        #       x       =   x_0 + x1e1 + x2e2 + x12e12
+        # 'blades_idxs' :   0     1      2      3 
+
+        #       x       =   x_0 + x1e1 + x2e2 + x3e3 + x12e12 + x13e13 + x23e23 + x123e123
+        # 'blades_idxs' :   0     1      2      3      4        5        6        7
+
+        # Define hyperparameter grid for GridSearchCV
+        param_grid = {
+            'kernel_size': [3, 5],
+            'stride': [1, 2],
+            'dense_units': [[1, 1, 1, 1, 256, 128, 64]],
+            'g': [[1,1], [1, 1, 1], [-1,-1], [-1, -1, -1]], 
+            'blades_idxs': [[0]], 
+            'sandwich': [True] #[True, False]
+        } 
+
+        # Initialize a list of features
+        features_list =  {'Features': ['mel_img_cnn']} #'mfcc_img_cnn', 'mel_img_cnn'
+
+		# Perform training using a Grid search cross-validation
+        gridSearch = GridSearchCV(cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42), param_grid=param_grid, module_name=module_name, model_name=model_name, EMD_flag=EMD_flag)
+        gridSearch.fit(dataset, features_list)
+    
+    if what == 7:
+
+        model_name = 'PureCliffSER2D_EMD'
+        
+        # Specify which module contains the model
+        module_name = 'clifford_'
+
+        EMD_flag = True
 
         # Define the hyperparameters grids
 
