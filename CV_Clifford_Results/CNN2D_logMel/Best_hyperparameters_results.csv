@@ -1,0 +1,2 @@
+kernel_size,pooling_size,dropout_rate,dense_units,avg_test_accuracy_returned_by_model,std_test_accuracy_returned_by_model,avg_test_accuracy_postprocess,avg_precision_postprocess,avg_recall_postprocess,avg_f1_postprocess
+"(5, 5)","(2, 2)",0.2,"(256, 128)",76.3524860319431,2.1610092903479853,0.7635248603194311,0.769987292686674,0.7635248603194311,0.7624356598041358

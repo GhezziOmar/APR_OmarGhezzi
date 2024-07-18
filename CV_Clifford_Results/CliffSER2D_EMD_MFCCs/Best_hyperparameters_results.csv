@@ -1,0 +1,2 @@
+kernel_size,stride,dense_units,g,blades_idxs,sandwich,avg_train_accuracy,std_train_accuracy,avg_test_accuracy,std_test_accuracy,avg_test_accuracy_post,avg_precision_post,avg_recall_post,avg_f1_post
+5,2,"[32, 64, 128, 256, 128]","[1, 1]","[0, 1, 2, 3]",False,0.9495158995448181,0.01856728512627939,0.692617143851719,0.01856728512627939,0.692617143851719,0.7062568562087683,0.692617143851719,0.6883860962807079
