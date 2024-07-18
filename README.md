@@ -20,13 +20,18 @@ Download the repository, then:
 
 ### Training
 
-*Action n*: Run training with 5-fold cv (and Grid Search) one of the n = 0,1,2,3,4,5,6,7.
+*run_GSCV*: Run 1D / 2D Clifford models training, with 5-fold cv (and Grid Search). Choose between one of the n = 0,1,2,3,4,5,6,7 available actions.
    ```sh
    python run_GSCV.py -a n
    ```
 
 
 with: 0 = 'CliffSER1D on EMD data', 1 = 'PureCliffSER1D on EMD data', 2 = 'CliffSER1D', 3 = 'PureCliffSER1D', 4 = 'CliffSER2D on EMD data', 5 = 'CliffSER2D', 6 = 'PureCliffSER2D', 7 = 'PureCliffSER2D on EMD data'
+
+*run_GSCV_W2V*: Run Clifford wav2vec training, with 5-fold cv (and Grid Search).
+   ```sh
+   python run_GSCV_W2V.py -a 0
+   ```
 
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
