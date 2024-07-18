@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3-blue.svg)
 ![License](https://img.shields.io/badge/License-GNU%20GPL%20v3-orange.svg)
 
-Demo code for the Audio Pattern Recognition exam project. We introduce novel hypercomplex models, including \texttt{CliffSER1D}, \texttt{CliffSER2D}, \texttt{PureCliffSER1D} and \texttt{PureCliffSER2D}, designed to predict discrete emotional classes from hand-crafted MFCCs and logMel spectrogram features in both 1D and 2D domains.
+Demo code for the Audio Pattern Recognition exam project. We introduce novel hypercomplex models, including CliffSER1D, CliffSER2D, PureCliffSER1D and PureCliffSER2D, designed to predict discrete emotional classes from hand-crafted MFCCs and logMel spectrogram features in both 1D and 2D domains.
 
 ## Getting Started
 
