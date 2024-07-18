@@ -24,6 +24,7 @@ Download the repository, then:
    ```sh
    python run_GSCV.py -a n
 
+
 with: 0 = 'CliffSER1D on EMD data', 1 = 'PureCliffSER1D on EMD data', 2 = 'CliffSER1D', 3 = 'PureCliffSER1D', 4 = 'CliffSER2D on EMD data', 5 = 'CliffSER2D', 6 = 'PureCliffSER2D', 7 = 'PureCliffSER2D on EMD data'
 
 ## License
