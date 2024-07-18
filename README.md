@@ -1,4 +1,4 @@
-# APR_OmarGhezzi: Comparative Analysis of Traditional, Hypercomplex, and Pre-trained Deep Neural Networks for Audio Emotion Recognition
+# Comparative Analysis of Traditional, Hypercomplex, and Pre-trained Deep Neural Networks for Audio Emotion Recognition
 
 ![Python](https://img.shields.io/badge/python-3-blue.svg)
 ![License](https://img.shields.io/badge/License-GNU%20GPL%20v3-orange.svg)
